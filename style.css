@@ -1,0 +1,221 @@
+/* GENERAL & UTILITIES */
+:root {
+	--primary-color: #0d6efd; /* Biru Bootstrap */
+	--secondary-color: #6c757d;
+	--bg-light: #f8f9fa;
+	--text-dark: #212529;
+	--text-light: #ffffff;
+	--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: #444444;
+}
+
+.section-padding {
+	padding: 80px 0;
+}
+
+.section-title {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--text-dark);
+}
+
+/* NAVBAR */
+#navbar {
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+	font-weight: 700;
+}
+.nav-link {
+	font-weight: 500;
+}
+
+/* HERO SECTION */
+#hero {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--bg-light);
+}
+
+.hero-title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: var(--text-dark);
+}
+.hero-subtitle {
+	max-width: 600px;
+	margin: 20px auto 30px auto;
+}
+.hero-stats h3 {
+	font-size: 2.5rem;
+	color: var(--primary-color);
+}
+.hero-stats p {
+	color: var(--secondary-color);
+}
+.hero-buttons .btn {
+	margin: 0 10px;
+	padding: 12px 30px;
+	border-radius: 50px;
+	font-weight: 600;
+}
+.hero-socials {
+	margin-top: 30px;
+}
+.hero-socials a {
+	font-size: 1.2rem;
+	color: var(--secondary-color);
+	margin: 0 15px;
+	transition: color 0.3s;
+}
+.hero-socials a:hover {
+	color: var(--primary-color);
+}
+
+/* ABOUT SECTION */
+.about-img {
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	box-shadow: var(--card-shadow);
+}
+.about-card {
+	padding: 20px;
+}
+
+/* SKILLS SECTION */
+.skill-card {
+	background: var(--text-light);
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: var(--card-shadow);
+	margin-bottom: 20px;
+}
+.skill-item {
+	margin-bottom: 20px;
+}
+
+.skill-list {
+	list-style: none; /* <-- BARIS INI YANG MENGHILANGKAN BULLET */
+	padding-left: 0; /* Ini untuk menghilangkan spasi kosong di kiri */
+	margin-bottom: 0;
+}
+.skill-list li i {
+	color: var(--primary-color); /* Memberi warna biru pada ikon */
+	margin-right: 12px; /* Memberi jarak antara ikon dan teks */
+	font-size: 1.2rem; /* Sedikit memperbesar ukuran ikon */
+	width: 20px; /* Memberi lebar tetap agar semua teks lurus */
+	text-align: center; /* Memastikan ikon pas di tengah wadahnya */
+}
+.skill-category-title {
+	font-weight: 600;
+	margin-bottom: 25px; /* Sedikit tambah jarak ke bawah */
+	color: var(--text-dark);
+	display: inline-block; /* Membuat elemen pas dengan lebar teksnya */
+	position: relative;
+	padding-bottom: 8px; /* Jarak antara teks dan garis bawah */
+}
+
+/* Ini adalah pseudo-elemen untuk membuat garis bawah kustom */
+.skill-category-title::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%; /* Lebar garis sama dengan lebar teks */
+	height: 3px; /* Ketebalan garis */
+	background: var(--primary-color); /* Warna biru primer */
+	bottom: 0;
+	left: 0;
+}
+
+/* RESUME SECTION */
+.resume-title {
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: var(--text-dark);
+}
+.resume-item {
+	padding: 0 0 20px 20px;
+	margin-top: -2px;
+	border-left: 2px solid var(--primary-color);
+	position: relative;
+}
+.resume-item::before {
+	content: "";
+	position: absolute;
+	left: -9px;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 2px solid var(--primary-color);
+	background: #fff;
+}
+.resume-item h4 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--primary-color);
+}
+.resume-item h5 {
+	font-size: 1rem;
+	background: #e4edf9;
+	padding: 5px 15px;
+	display: inline-block;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: var(--card-shadow);
+}
+.portfolio-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	color: var(--text-light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.portfolio-item:hover .portfolio-overlay {
+	opacity: 1;
+}
+
+/* CONTACT SECTION */
+.contact-info-box {
+	background: var(--primary-color);
+	color: var(--text-light);
+	padding: 30px;
+	border-radius: 10px;
+}
+.contact-info-item {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+.contact-info-item i {
+	font-size: 1.5rem;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+.contact-form-box {
+	background: var(--text-light);
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: var(--card-shadow);
+}
