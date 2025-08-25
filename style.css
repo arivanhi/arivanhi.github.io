@@ -202,11 +202,14 @@ body {
 	color: var(--text-light);
 	padding: 30px;
 	border-radius: 10px;
+	box-shadow: var(--card-shadow);
 }
 .contact-info-item {
 	display: flex;
 	align-items: flex-start;
+	/* margin-left: 50px; */
 	margin-bottom: 20px;
+	align-content: center;
 }
 .contact-info-item i {
 	font-size: 1.5rem;
